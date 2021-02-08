@@ -33,4 +33,15 @@ public class Deck {
     return cards.remove(0);
   }
   
+  
+
+@Override
+public String toString() {
+	StringBuilder builder = new StringBuilder();
+	builder.append("Deck [cards=").append(cards).append("]");
+	return builder.toString();
+}
+  
+  
+  
 }

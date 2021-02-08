@@ -1,24 +1,24 @@
 package com.skilldistillery.cards;
 
-public class Card {
-  private Rank rank;
-  private Suit suit;
+public class Card{
+  private Rank r;
+  private Suit s;
   
   public Card(Rank rank, Suit suit) {
-    this.rank = rank;
-    this.suit = suit;
+    this.r = rank;
+    this.s = suit;
   }
   
   public int getValue() {
-    return rank.getValue();
+    return r.getValue();
   }
 
-  @Override
+@Override
   public int hashCode() {
     final int prime = 31;
     int result = 1;
-    result = prime * result + ((rank == null) ? 0 : rank.hashCode());
-    result = prime * result + ((suit == null) ? 0 : suit.hashCode());
+    result = prime * result + ((r == null) ? 0 : r.hashCode());
+    result = prime * result + ((s == null) ? 0 : s.hashCode());
     return result;
   }
 
@@ -31,9 +31,9 @@ public class Card {
     if (getClass() != obj.getClass())
       return false;
     Card other = (Card) obj;
-    if (rank != other.rank)
+    if (r != other.r)
       return false;
-    if (suit != other.suit)
+    if (s != other.s)
       return false;
     return true;
   }
@@ -41,9 +41,9 @@ public class Card {
   @Override
   public String toString() {
     StringBuilder builder = new StringBuilder();
-    builder.append(rank);
+    builder.append(r);
     builder.append(" of ");
-    builder.append(suit);
+    builder.append(s);
     return builder.toString();
   }
   
